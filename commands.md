@@ -13,9 +13,9 @@
 - [Sorting Files](#sorting-files)
 - [File Permissions](#file-permissions)
 - [Finding Files](#finding-files)
-- [Find in Files](#find-in-files)
-- [Replace in Files](#replace-in-files)
-- [File Editor](#file-editor)
+- [Find in Files - grep](#find-in-files)
+- [Replace in Files - sed](#replace-in-files)
+- [File Editor - nano](#file-editor)
 - [Symbolic Links](#symbolic-links)
 - [Compressing Files](#compressing-files)
 - [Decompressing Files](#decompressing-files)
@@ -269,6 +269,7 @@ find /path -type d -name foo               # Find a directory
 find /path -type l -name foo.txt           # Find a symbolic link
 find /path -type f -mtime +30              # Find files that haven't been modified in 30 days
 find /path -type f -mtime +30 -delete      # Delete files that haven't been modified in 30 days
+find /usr/share/doc/ -type f -name 'python*' ! -name 'python3*' # Find all files contains python in name, except python3
 ```
 [⬆ ʀᴇᴛᴜʀɴ ᴛᴏ ᴄᴏɴᴛᴇɴᴛꜱ](#contents)
 
@@ -292,6 +293,7 @@ grep --extended-regexp|-E 'foo|bar' /baz -R # Use regular expressions
 grep -E 'foo|bar' /baz -R                   # Use regular expressions
 grep "^trusted" /etc/xattr.conf             # "^" Looks for items at the start of the line
 grep "trusted$" /etc/xattr.conf             # "$" Looks for items at the end of the line
+grep '[0-9]\+' /etc/subgid                  # Finds lines containing any number of digits in a file
 ```
 
 ### Replace in Files
