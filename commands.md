@@ -290,6 +290,8 @@ grep 'foo' /bar --colour                    # Add colour to output
 grep 'foo\|bar' /baz -R                     # Search for 'foo' or 'bar' in directory 'baz'
 grep --extended-regexp|-E 'foo|bar' /baz -R # Use regular expressions
 grep -E 'foo|bar' /baz -R                   # Use regular expressions
+grep "^trusted" /etc/xattr.conf             # "^" Looks for items at the start of the line
+grep "trusted$" /etc/xattr.conf             # "$" Looks for items at the end of the line
 ```
 
 ### Replace in Files
