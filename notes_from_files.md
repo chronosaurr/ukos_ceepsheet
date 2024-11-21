@@ -7,6 +7,7 @@
 * `tail` – wyświetlenie od końca || parametry [-liczba linii do wyświetlenia] [ścieżka]
 * `sort` [-opcje] [ścieżka]
 * `nl` – numer line (ponumeruje linijki)
+* `read` – wprowadzanie danych przez uzytkownika
 
 ### Wildcards – znaki specjalne
 * `*` – dowolna ilość, dowolne znaki
