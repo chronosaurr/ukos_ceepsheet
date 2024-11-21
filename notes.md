@@ -114,3 +114,39 @@ if [ ${INPUT_UNIT} == "F" ]; then
         fi
 fi
 ```
+
+### GENERATOR
+```sh
+#!/bin/bash
+
+NAME=$1
+AUTHOR=$2
+DATE=$3
+
+if [ -z ${NAME} ]; then
+        echo "use: generator.sh NAME AUTHOR DATE"
+        read -p "What is the name of the project? " NAME
+        echo ${NAME}
+fi
+if [ -z ${AUTHOR} ]; then
+        read -p "What is the author of said project? " AUTHOR
+        echo ${AUTHOR}
+fi
+if [ -z ${DATE} ]; then
+        read -p "What is the starting date of the project? " DATE
+        echo ${DATE}
+fi
+
+
+read -p "Please, enter the description of the project " DESCRIPTION
+
+
+echo "# Project $NAME " > README.md
+echo "" >> README.md
+echo "### Author of the project: ${AUTHOR}" >> README.md
+echo "" >> README.md
+echo "### The starting date of the project: ${DATE}" >> README.md
+echo "" >> README.md
+echo "### Description: " >> README.md
+echo "${DESCRIPTION}" >> README.md
+```
