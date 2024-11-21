@@ -38,3 +38,9 @@ less text.txt
 ```sh
 more text.txt
 ```
+
+## wyswietlanie polecania oraz wczytanie danych od użytkownika
+* `read` - wczytuje dane od użytkownika
+```sh
+read -p "What is your favourite game?"
+```
